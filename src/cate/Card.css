@@ -1,0 +1,11 @@
+.cart-fan{
+    width: 100px;
+    height: 60px;
+    float: left;
+    margin-left: 40px;
+    margin-top: 20px;
+    background-color: rgb(21, 174, 204);
+}
+.cart-fan i{
+    font-size: 2rem;
+}

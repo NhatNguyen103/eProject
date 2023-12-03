@@ -1,0 +1,116 @@
+
+.NavbarItems {
+    display: flex;
+    justify-content: space-between; /* Các phần tử con sẽ được căn cách nhau sao cho đều có khoảng trắng giữa chúng */
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+    height: 80px;
+    width: 98%;
+    border-radius: 13px;
+    position: fixed;
+    top: 15px;
+    z-index: 9999;
+    background-color: #fff;
+  }
+  
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links {
+    text-decoration: none;
+    color: #222;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 0.7rem 1rem;
+    white-space: nowrap;
+  }
+  
+  .nav-links i {
+    padding-right: 30px;
+  }
+  
+  .nav-links:hover {
+    background-color: blue;
+    color: #fff;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .menu-icons {
+    display: none;
+  }
+  
+  @media screen and (max-width: 850px) {
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      background: #fff;
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 100%;
+      left: -100%;
+      opacity: 1;
+      align-items: stretch;
+      padding: 80px 0 30px 0;
+      margin: 0;
+      transition: 0.3s ease-in-out;
+      border-radius: 13px;
+    }
+  
+    .nav-menu.active {
+      left: 0;
+      opacity: 1;
+      z-index: -1;
+      transition: 0.3s ease-in-out;
+    }
+  
+    .nav-links {
+      display: block;
+      width: 100%;
+      font-size: 1.2rem;
+      padding: 2rem 0;
+    }
+  
+    .nav-links:hover {
+      background: blue;
+      transition: none;
+    }
+  
+    .menu-icons {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .menu-icons i {
+      font-size: 1.2rem;
+      color: #222;
+    }
+  }
+.nav-links {
+    display: flex;
+    flex-direction: column-reverse; /* Hiển thị số lượng hàng trên đầu, vị trí ngược lại so với các phần tử khác */
+    position: relative;
+}
+
+.fa-cart-plus {
+   margin-left: 15px;
+}
+
+/* Số lượng hàng */
+.cart-count {
+    position: absolute;
+    top: 0; /* Điều chỉnh vị trí số lượng hàng so với nút giỏ hàng */
+    right: 24px; /* Điều chỉnh giá trị right để căn chỉnh vị trí bên phải */
+    background-color: #ff0000;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 50%;
+    font-size: 12px;
+}

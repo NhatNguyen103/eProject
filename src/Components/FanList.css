@@ -1,0 +1,101 @@
+.container {
+    text-align: center;
+}
+
+.username {
+    font-size: 15px;
+}
+
+.nav-font {
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+Link {
+    text-decoration: none;
+}
+
+.user-container {
+    width: 300px;
+    height: 400px;
+    border: solid rgb(104, 104, 160);
+    box-shadow: 3px 3px 3px rgb(248, 142, 142);
+    margin: 20px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 1s all;
+}
+
+.link-user {
+    text-decoration: none;
+}
+
+.user-container button:hover {
+    background-color: #2980b9;
+}
+
+
+.link-user {
+    text-decoration: none;
+}
+
+.hover-effect {
+    width: 500px;
+    transition: transform 0.3s;
+}
+
+.hover-effect:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.none {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    /* Điều chỉnh chiều cao theo ý muốn của bạn */
+    overflow: hidden;
+}
+
+.imagefan {
+    width: 100%;
+    height: auto;
+}
+
+.text-center {
+    position: absolute;
+    bottom: 0;
+}
+
+.cart-fan {
+    width: 100px;
+    height: 60px;
+    float: left;
+    margin-left: 35px;
+    margin-top: 20px;
+    background-color: rgb(21, 174, 204);
+
+}
+
+.cart-fan i {
+    font-size: 2rem;
+}
+
+.show {
+    width: 100px;
+    height: 60px;
+    float: left;
+    margin-left: 2px;
+    margin-top: 20px;
+
+
+}

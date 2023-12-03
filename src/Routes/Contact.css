@@ -1,0 +1,25 @@
+.add {
+    color: black;
+    font-weight: bold;
+}
+.icon-holder {
+    position: absolute;
+    /* Tính vị trí tuyệt đối để di chuyển icon ra khỏi luồng bình thường của dòng */
+    text-align: center;
+    font-size: 30px;
+    padding-left: 10%;
+   color: rgb(0, 63, 127);
+   border-radius: 2px;
+   
+  }
+  .sm1 {
+    padding-top: 50px;
+  }
+  .website-icon {
+    order: -1; /* Số âm để đặt lên đầu danh sách */
+  }
+  .fa-sharp.fa-solid.fa-globe-pointer {
+    margin-bottom: 30px; /* Điều chỉnh giảm độ cao giữa logo và các logo khác */
+  }
+  
+  

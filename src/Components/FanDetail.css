@@ -1,0 +1,139 @@
+.fan-detail-container {
+  margin-top:100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+.fan-detail-container .fan-info{
+  margin-top: 20px;
+}
+.fan-detail-container .fan-pic {
+  max-width: 700px;
+  width: 100%;
+  margin: 20px;
+  height: 550px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: solid 2px brown;
+}
+
+.fan-detail-container .fan-pic:hover {
+  background-size: 150%;
+  border: 1px solid #ddd;
+}
+
+.cartfan {
+  width: 200px;
+  height: 60px;
+  margin-top: 20px;
+  margin-left: 30px;
+  background-color: rgb(21, 174, 204);
+  color: orange;
+}
+
+.cartfan i {
+  align-items: center;
+  font-size: 2rem;
+  margin-right: 15px;
+}
+.fan-info ul li{
+  list-style-type: square;
+  font-size: 1.3rem;
+  text-align: left;
+  margin-top: 20px;
+}
+.price del{
+  float: left;
+}
+.buy {
+  align-items: center;
+  font-size: 1.5rem;
+}
+.information{
+  font-size: 1.3rem;
+  width: 80%;
+  text-align: center;
+}
+.des {
+  font-size: 3rem;
+  color: blue;
+}
+
+table {
+  border: solid rgb(111, 0, 255) 1px;
+  height: 80px;
+  width: 900px;
+  text-align: center;
+}
+
+th {
+  border: solid rgb(111, 0, 255) 1px;
+}
+
+td {
+  border: solid rgb(111, 0, 255) 1px;
+}
+
+.left {
+  font-size: 1.4rem;
+  width: 400px;
+  background-color: rgb(196, 188, 180);
+}
+
+.right {
+  font-size: 1.4rem;
+}
+.download button{
+  align-items: center;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  background-color: rgb(112, 204, 175);
+}
+@media screen and (max-width:850px) {
+  .fan-info {
+    margin-top: 230px;
+  }
+
+  table {
+    border: solid rgb(111, 0, 255) 3px;
+    height: 80px;
+    width: 440px;
+  }
+
+  th {
+    border: solid rgb(111, 0, 255) 1px;
+  }
+
+  td {
+    border: solid rgb(111, 0, 255) 1px;
+  }
+
+  .left {
+    font-size: 1rem;
+    width: 190px;
+  }
+
+  .right {
+    font-size: 1rem;
+  }
+  .download{
+    margin-left: 40px;
+    font-size: 1.2rem;
+  }
+  .cartfan {
+    width: 150px;
+    height: 50px;
+    margin-top: 10px;
+    float: left;
+  }
+  .cartfan i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+  }
+  .buy {
+    font-size: 1rem;
+  }
+}

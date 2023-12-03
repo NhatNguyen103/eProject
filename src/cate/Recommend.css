@@ -1,0 +1,42 @@
+.recommended-btns{
+    display: flex;
+    margin-left: 20rem;
+}
+.recommended-title{
+    margin-left: 3rem;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+.btns{
+    padding: 10px 20px;
+    margin-right: 6px;
+    background: transparent;
+    border: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #323232;
+    cursor: pointer;
+}
+@media screen and (max-width: 850px){
+    .recommended-btns{
+        display: flex;
+        margin-left: 20rem;
+    }
+    .recommended-title{
+        margin-left: 3rem;
+        margin-bottom: 20px;
+        margin-top: 40px;
+        font-size: 30px;
+        font-family: sans-serif;
+    }
+    .btns{
+        padding: 10px 20px;
+        background: transparent;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        color: #323232;
+        cursor: pointer;
+    }
+}
