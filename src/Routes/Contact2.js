@@ -141,7 +141,7 @@ function Contact2() {
 </form>
               {/* Link liên kết để đăng nhập  */}
               <p>
-              <Link style={{color: "red"}}>Do you have a query? </Link>
+              <Link to="/Contact2" style={{color: "red"}}>Back to Contact page? </Link>
               </p>
             </div>
             </div>
