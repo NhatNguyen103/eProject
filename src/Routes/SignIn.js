@@ -66,7 +66,7 @@ import { useNavigate , Link } from "react-router-dom";
         <div className="container">
         <div className="row justify-content-around  my-3 bg-light p-3">
         <div className="col-md-6 col-sm-6 col-xl-6">
-          <img src="./image/anhlog.webp" alt="" />
+          <img src="./image/in1.jpg" alt="" />
         </div>
           <div className="col-sm-6 col-xl-6 col-xl-6">
             <h1>Log In</h1>

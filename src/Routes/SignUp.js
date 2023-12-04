@@ -76,13 +76,13 @@ function SignUp() {
       <div className="container">
       <div className="row justify-content-around  my-3 bg-light p-3">
       <div className="col-md-6 col-sm-6 col-xl-6">
-        <img src="./image/anhlog.webp" alt="" />
+        <img src="./image/up1.jpg" alt="" />
       </div>
         <div className="col-sm-6 col-xl-6 col-xl-6">
           <h1>Register</h1>
 
           <img
-            src="./image/quat.jpg"
+            src="./image/icon.png"
             alt=""
             className="rotating-fan rounded-circle"
           />

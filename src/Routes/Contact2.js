@@ -65,7 +65,7 @@ function Contact2() {
         <div className="container">
           <div className="row justify-content-around class">
             <div className="col-md-6 col-xl-6 col-sm-6 my-3 bg-light p-3 ">
-              <img src="./image/signup.jpg" alt="" />
+              <img src="./image/signup.png" alt="" />
             </div>
             <div className="col-md-6 col-xl-6 col-sm-6 my-3 bg-light p-3 ">
               
