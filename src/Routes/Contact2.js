@@ -137,9 +137,6 @@ function Contact2() {
             </div>
            </div>
           </div>
-       
-     
-
       <Footer />
     </div>
   );

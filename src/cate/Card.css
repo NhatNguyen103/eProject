@@ -1,11 +1,16 @@
 .cart-fan{
     width: 100px;
     height: 60px;
-    float: left;
-    margin-left: 40px;
-    margin-top: 20px;
     background-color: rgb(21, 174, 204);
+    margin-right: 50px;
 }
 .cart-fan i{
     font-size: 2rem;
+}
+.button-fan{
+    display: grid;
+    float: right;
+}
+.detail-fan{
+    margin-left: 35px;
 }

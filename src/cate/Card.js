@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useCart } from 'react-use-cart'; // Import hook
 import './Card.css';
 
-function Card({pic, title, review, newPrice, Price, id}) {
+function Card({ pic, title, review, newPrice, Price, id }) {
   const navigate = useNavigate();
   const { addItem } = useCart(); // Sử dụng addItem từ hook
 
@@ -35,12 +35,15 @@ function Card({pic, title, review, newPrice, Price, id}) {
               <del>{Price}</del><span className='newPrice'>${newPrice}</span>
             </div>
           </section>
-          <button className=" cart-fan  " onClick={handleAddToCart}>
-            <i className="fa-solid fa-cart-plus"></i>
-          </button>
-          <button className='detail-fan' onClick={ ()=>navigate(`/Categories/${id}`)}>
-            <p>Show more</p>
-          </button>
+          <div className='button-fan'>
+            <button className="cart-fan" onClick={handleAddToCart}>
+              <i className="fa-solid fa-cart-plus"></i>
+            </button>
+            <button className='detail-fan' onClick={() => navigate(`/Categories/${id}`)}>
+              <p>Show more</p>
+            </button>
+          </div>
+
         </div>
       </section>
     </div>

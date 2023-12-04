@@ -27,7 +27,7 @@ function SignIn() {
     onSubmit: (values) => {
       if (Object.keys(formik.errors).length === 0) {
         // Thực hiện đăng ký
-        window.alert("Registration successful! Welcome to our website.");
+        window.alert("Login successful! Welcome to our website.");
         navigate("/");
       } else {
         window.alert("Please fill in the correct login information!");
