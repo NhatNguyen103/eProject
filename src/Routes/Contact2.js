@@ -6,8 +6,8 @@ import { useNavigate, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import "./Contact.css";
-import ContactMap from "./ContactMap";
+import "./Contanct.css";
+import ContactMap from "./ContanctMap";
 
 function Contact2() {
   const navigate = useNavigate();
@@ -65,7 +65,7 @@ function Contact2() {
         <div className="container">
           <div className="row justify-content-around class">
             <div className="col-md-6 col-xl-6 col-sm-6 my-3 bg-light p-3 ">
-              <img src="./image/signup.png" alt="" />
+              <img src="./image/signup.jpg" alt="" />
             </div>
             <div className="col-md-6 col-xl-6 col-sm-6 my-3 bg-light p-3 ">
               
@@ -78,6 +78,8 @@ function Contact2() {
       type="text"
       name="name"
       id=""
+      onBlur={formik.handleBlur}
+
       placeholder="Your name"
       value={formik.values.name}
       onChange={formik.handleChange}
@@ -93,6 +95,8 @@ function Contact2() {
       type="email"
       name="email"
       id=""
+      onBlur={formik.handleBlur}
+
       placeholder="Your email"
       value={formik.values.email}
       onChange={formik.handleChange}
@@ -108,6 +112,8 @@ function Contact2() {
       type="text"
       name="subject"
       id=""
+      onBlur={formik.handleBlur}
+
       placeholder="Your query"
       value={formik.values.subject}
       onChange={formik.handleChange}
@@ -123,12 +129,19 @@ function Contact2() {
     type="submit"
     value="Send Message"
     className="btn btn-success mt-3"
-    disabled={Object.keys(formik.errors).length > 0}
+    disabled={
+      Object.keys(formik.errors).length > 0 ||
+      !formik.isValid ||
+      !formik.touched.name ||
+      !formik.touched.email ||
+      !formik.touched.query 
+    
+      }
   />
 </form>
               {/* Link liên kết để đăng nhập  */}
               <p>
-              <Link to='/Contact'  style={{color: "red"}}>Back to contact page? </Link>
+              <Link style={{color: "red"}}>Do you have a query? </Link>
               </p>
             </div>
             </div>
@@ -137,6 +150,9 @@ function Contact2() {
             </div>
            </div>
           </div>
+       
+     
+
       <Footer />
     </div>
   );

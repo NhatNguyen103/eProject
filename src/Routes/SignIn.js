@@ -1,72 +1,92 @@
-import { useNavigate, Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { useFormik } from "formik";
-import * as Yup from "yup";
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
-import HeroSection from "../Components/HeroSection";
-import "./SignIn.css";
+import { useNavigate , Link } from "react-router-dom";
+  import "bootstrap/dist/css/bootstrap.min.css";
+  import { useFormik } from "formik";
+  import * as Yup from "yup";
+  import Footer from "../Components/Footer";
+  import HeroSection from "../Components/HeroSection";
+  import Navbar from "../Components/Navbar";
+  import Swal from "sweetalert2";
 
-function SignIn() {
+
+  function SignIn() {
+
+    const navigate = useNavigate();
+
+  const handleShowAlert = () => {
+    Swal.fire({
+      title: "Thank You",
+      text: "Logged in successfully! Welcome to the website!",
+      icon: "success",
+      confirmButtonText: "OK",
+    });
+  };
+
   const formik = useFormik({
     initialValues: {
       email: "",
       password: "",
-      
-
     },
     validationSchema: Yup.object({
       email: Yup.string()
         .email("Invalid Email")
-        .required("Your must fill in this section"),
+        .required("You must fill in this section"),
       password: Yup.string()
         .min(8, " Your PassWord must be at least 8 characters! ")
-        .required("Your must fill in this section"),
-        
+        .required("You must fill in this section"),
     }),
     onSubmit: (values) => {
       if (Object.keys(formik.errors).length === 0) {
-        // Thực hiện đăng ký
-        window.alert("Login successful! Welcome to our website.");
+        // Handle form submission success
+        handleShowAlert();
         navigate("/");
       } else {
-        window.alert("Please fill in the correct login information!");
+        // Handle form validation errors if needed
+        window.alert("Please fill in the correct information to Login!");
       }
     },
   });
-  const navigate = useNavigate();
 
-  return (
-    <div>
+  
+    
+    return (
+      <div className="body">    
       <div>
-        <Navbar />
-        <HeroSection
-          name="hero-contact"
-          img="./image/contact.jpg"
-          title="LOG IN "
-        />
+      <Navbar/>
+      <HeroSection
+                  name="hero-contact"
+                  img="./image/contact.jpg"
+                  title="Register"
+              />
       </div>
-      <div className="container">
-        <div className="row justify-content-around class my-3 bg-light p-3">
+      
+
+      <div>
+        
+      </div>
+        <div className="container">
+        <div className="row justify-content-around  my-3 bg-light p-3">
         <div className="col-md-6 col-sm-6 col-xl-6">
           <img src="./image/anhlog.webp" alt="" />
         </div>
-          <div className="col-md-6 col-sm-6 col-xl-6 ">
+          <div className="col-sm-6 col-xl-6 col-xl-6">
             <h1>Log In</h1>
-            
+
             <img
               src="./image/quat.jpg"
               alt=""
               className="rotating-fan rounded-circle"
             />
-            
+          
             <form onSubmit={formik.handleSubmit} className="signup-form">
+              
+              
               <div>
                 <label className="form-group text-uppercase  form-label"></label>
                 <input
                   type="text"
                   name="email"
                   id=""
+                  onBlur={formik.handleBlur}
                   placeholder="Enter Your Email"
                   value={formik.values.email}
                   onChange={formik.handleChange}
@@ -82,6 +102,7 @@ function SignIn() {
                   type="password"
                   name="password"
                   id=""
+                  onBlur={formik.handleBlur}
                   placeholder="Enter Your PassWord"
                   value={formik.values.password}
                   onChange={formik.handleChange}
@@ -89,28 +110,38 @@ function SignIn() {
                 />
                 {formik.errors.password && formik.touched.password ? (
                   <div className="error-message">{formik.errors.password}</div>
-                ) : null}
+                ) : null} 
               </div>
+              
+          
 
+          <div>
+          <input type="submit" value="Register"
+                // Call handleSignUp when the button is clicked
+              class="btn btn-primary mt-3" 
+              disabled={
+      Object.keys(formik.errors).length > 0 ||
+      !formik.isValid ||
+  
+      !formik.touched.email ||
+      !formik.touched.password 
 
-<input 
-                type="submit"
-                value="Log In"
-                class="btn btn-primary mt-3"
-                disabled={Object.keys(formik.errors).length > 0}
+    }
               />
-
+          </div>
             </form>
-            {/* Link liên kết để đăng nhập  */}
+          
             <p>
-              Don't have an account? <Link to="/signup">Register</Link>
-            </p>
+  Don't have an account? <Link to="/signup">Register</Link>
+</p>
           </div>
         </div>
       </div>
-      <Footer />
-    </div>
-  );
-}
+      <Footer/>
 
-export default SignIn;
+      </div>
+      
+    );
+  }
+
+  export default SignIn;

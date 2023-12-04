@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 import Card from '../cate/Card';
 import Footer from "../Components/Footer";
 import { useCart } from 'react-use-cart'; // Import hook
-
+import "./Categories.css"
 function Categories() {
     const { addItem } = useCart();
 
@@ -86,18 +86,26 @@ function Categories() {
 
     return (
         <div>
-            <Navbar onLogoClick={handleLogoClick} onShowMoreClick={handleShowMoreClick} />
-            <HeroSection
-                name="hero-gal"
-                img="./image/gal.jpg"
-                title="CATEGORIES"
-            />
-            <Sidebar handleChange={handleChange} />
-            <Search onSearch={handleSearch} query={query} handleChange={handleInputChange} />
+            <div className="info-category">
+                <Navbar onLogoClick={handleLogoClick} onShowMoreClick={handleShowMoreClick} />
+                <HeroSection
+                    name="hero-gal"
+                    img="./image/gal.jpg"
+                    title="CATEGORIES"
+                />
+            </div>
+            <div className="sidebar-cate">
+                <Sidebar handleChange={handleChange} />
+                <Search onSearch={handleSearch} query={query} handleChange={handleInputChange} />
 
-            <Recommend handleChange={handleClick} />
-            <Product result={result} />
-            <Footer />
+                <Recommend handleChange={handleClick} />
+                <Product result={result} />
+                <img src="./image/cate1.jpg" alt=""  className="imglast"/>
+            </div>
+            <div className="footer-category">
+                <Footer />
+            </div>
+
         </div>
     );
 }

@@ -5,9 +5,19 @@ import * as Yup from "yup";
 import Footer from "../Components/Footer";
 import HeroSection from "../Components/HeroSection";
 import Navbar from "../Components/Navbar";
+import Swal from "sweetalert2";
 
 function SignUp() {
+  const navigate = useNavigate();
 
+  const handleShowAlert = () => {
+    Swal.fire({
+      title: "Thank You",
+      text: "Resigter  in successfully! ",
+      icon: "success",
+      confirmButtonText: "OK",
+    });
+  };
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -36,20 +46,17 @@ function SignUp() {
         .required("You must fill in this section"),
         
     }),
-    onSubmit: values => {
-        if (Object.keys(formik.errors).length === 0) {
-          // Thực hiện đăng ký
-          window.alert("Registration successful!");
-          navigate("/SignIn");
-        } else {
-          window.alert("Please fill in the correct information to register!");
-        }
-      },
-      
-
+    onSubmit: (values) => {
+      if (Object.keys(formik.errors).length === 0) {
+        // Handle form submission success
+        handleShowAlert();
+        navigate("/SignIn");
+      } else {
+        // Handle form validation errors if needed
+        window.alert("Please fill in the correct information to Login!");
+      }
+    },
   });
-  const navigate = useNavigate();
-
   
   return (
     <div className="body">    
@@ -87,6 +94,8 @@ function SignUp() {
                 type="text"
                 name="name"
                 id=""
+                onBlur={formik.handleBlur}
+
                 placeholder="Enter Your Name"
                 value={formik.values.name}
                 onChange={formik.handleChange}
@@ -102,6 +111,8 @@ function SignUp() {
                 type="text"
                 name="email"
                 id=""
+                onBlur={formik.handleBlur}
+
                 placeholder="Enter Your Email"
                 value={formik.values.email}
                 onChange={formik.handleChange}
@@ -117,6 +128,8 @@ function SignUp() {
                 type="password"
                 name="password"
                 id=""
+                onBlur={formik.handleBlur}
+
                 placeholder="Enter Your PassWord"
                 value={formik.values.password}
                 onChange={formik.handleChange}
@@ -132,6 +145,8 @@ function SignUp() {
                 type="password"
                 name="ConfirmPassWord"
                 id=""
+                onBlur={formik.handleBlur}
+
                 placeholder=" Enter Your ConFirmPassWord"
                 value={formik.values.ConfirmPassWord}
                 onChange={formik.handleChange}
@@ -150,6 +165,8 @@ function SignUp() {
     type="text"
     name="Phone"
     id=""
+    onBlur={formik.handleBlur}
+
     placeholder="Enter Your Phone Number"
     value={formik.values.Phone}
     onChange={formik.handleChange}
@@ -163,8 +180,19 @@ function SignUp() {
         <div>
         <input type="submit" value="Register"
               // Call handleSignUp when the button is clicked
+           
             class="btn btn-primary mt-3" 
-            disabled={Object.keys(formik.errors).length > 0}
+              disabled={
+      Object.keys(formik.errors).length > 0 ||
+      !formik.isValid ||
+      !formik.touched.name ||
+      !formik.touched.email ||
+      !formik.touched.password ||
+      !formik.touched.ConfirmPassWord ||
+      !formik.touched.Phone 
+
+
+    }
             />
         </div>
           </form>
