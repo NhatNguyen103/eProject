@@ -58,7 +58,7 @@ const CheckoutPage = () => {
       <div className="container border">
         <div className="row ">
         <div className="col-xl-6">
-          <img src="./Image/mua1.jpeg" alt="" />
+          <img src="./image/mua1.jpeg" alt="" />
         </div>
 
           <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6">
