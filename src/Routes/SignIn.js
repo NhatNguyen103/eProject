@@ -72,7 +72,7 @@ import { useNavigate , Link } from "react-router-dom";
             <h1>Log In</h1>
 
             <img
-              src="./image/quat.jpg"
+              src="./image/icon.png"
               alt=""
               className="rotating-fan rounded-circle"
             />
