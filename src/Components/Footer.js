@@ -1,5 +1,6 @@
 import React from "react";
-import "./Footer.css"
+import "./Footer.css";
+import { Link } from "react-router-dom";
 function Footer() {
   const address = "590 Đ. Cách Mạng Tháng 8, Phường 11, Quận 3, Thành phố Hồ Chí Minh 700000";
   const encodedAddress = encodeURIComponent(address);
@@ -25,10 +26,10 @@ function Footer() {
               <h3>COMPANY</h3>
               <hr className="Hr" />
 
-              <p><a href="/" className="text-white link1">Home</a></p>
-              <p><a href="/About" className="text-white link1">About</a></p>
-              <p><a href="/Categories" className="text-white link1">Categories</a></p>
-              <p><a href="/Gallery" className="text-white link1">Gallery</a></p>
+              <p><Link to="/" className="text-white link1">Home</Link></p>
+              <p><Link to="/About" className="text-white link1">About</Link></p>
+              <p><Link to="/Categories" className="text-white link1">Categories</Link></p>
+              <p><Link to="/Gallery" className="text-white link1">Gallery</Link></p>
             </div>
             <div className="col-md-3 col-sm-6">
             <a href={googleMapsLink} className="text-white  " style={{textDecoration: "none"}}>
@@ -44,7 +45,7 @@ function Footer() {
               </a>
             </div>
             <div className="col-md-3 col-sm-6">
-            <a href="/Contact" className="text-white"><h3>CONTACT US</h3></a>
+            <Link to="/Contact" className="text-white"><h3>CONTACT US</h3></Link>
               
 
               <hr />

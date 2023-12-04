@@ -55,7 +55,7 @@ import { useNavigate , Link } from "react-router-dom";
       <HeroSection
                   name="hero-contact"
                   img="./image/contact.jpg"
-                  title="Register"
+                  title="Log In"
               />
       </div>
       

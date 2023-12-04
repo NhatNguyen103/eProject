@@ -59,7 +59,7 @@ function Contact() {
       <Navbar />
       <HeroSection
         name="hero-contact"
-        img="/Image/contact.jpg"
+        img="./image/contact.jpg"
         title="CONTACT"
       />
 
