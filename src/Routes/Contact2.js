@@ -6,11 +6,19 @@ import { useNavigate, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import "./Contact.css";
-import ContactMap from "./ContactMap";
+import "./Contanct.css";
+import ContactMap from "./ContanctMap";
 
 function Contact2() {
   const navigate = useNavigate();
+  const handleShowAlert = () => {
+    Swal.fire({
+      title: "Thank You",
+      text: "The form was submitted successfully!",
+      icon: "success",
+      confirmButtonText: "OK",
+    });
+  };
 
   const formik = useFormik({
     initialValues: {
@@ -27,8 +35,8 @@ function Contact2() {
         .email("Invalid Email")
         .required("Email is required"),
       subject: Yup.string()
-        .min(5, "Subject must be at least 5 characters")
-        .required("Subject is required"),
+        .min(5, "Query must be at least 5 characters")
+        .required("Query is required"),
     
     }),
 
@@ -36,21 +44,14 @@ function Contact2() {
       if (Object.keys(formik.errors).length === 0) {
         // Handle form submission success
         handleShowAlert();
-        navigate("/");
+        navigate("/Contact");
       } else {
         // Handle form validation errors if needed
       }
     },
   });
 
-  const handleShowAlert = () => {
-    Swal.fire({
-      title: "Thank You",
-      text: "The form was submitted successfully!",
-      icon: "success",
-      confirmButtonText: "OK",
-    });
-  };
+  
 
   return (
     <div>
@@ -107,7 +108,7 @@ function Contact2() {
     ) : null}
   </div>
   <div>
-    <label className="form-group text-uppercase  form-label"></label>
+<label className="form-group text-uppercase  form-label"></label>
     <input
       type="text"
       name="subject"
@@ -129,19 +130,19 @@ function Contact2() {
     type="submit"
     value="Send Message"
     className="btn btn-success mt-3"
-    disabled={
-      Object.keys(formik.errors).length > 0 ||
-      !formik.isValid ||
-      !formik.touched.name ||
-      !formik.touched.email ||
-      !formik.touched.query 
-    
-      }
+   
+        disabled={
+  Object.keys(formik.errors).length > 0 ||
+  !formik.isValid ||
+  !formik.touched.name ||
+  !formik.touched.email ||
+  !formik.touched.subject
+}
   />
 </form>
               {/* Link liên kết để đăng nhập  */}
               <p>
-              <Link to="/Contact" style={{color: "red"}}>Back to Contact page? </Link>
+              <Link to="/Contact" style={{color: "red"}} >Back to page ? </Link>
               </p>
             </div>
             </div>
