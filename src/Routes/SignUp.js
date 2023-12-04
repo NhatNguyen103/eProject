@@ -57,7 +57,7 @@ function SignUp() {
     <Navbar/>
     <HeroSection
                 name="hero-contact"
-                img="./Image/contact.jpg"
+                img="./image/contact.jpg"
                 title="Register"
             />
     </div>
@@ -69,7 +69,7 @@ function SignUp() {
       <div className="container">
       <div className="row justify-content-around  my-3 bg-light p-3">
       <div className="col-md-6 col-sm-6 col-xl-6">
-        <img src="./Image/anhlog.webp" alt="" />
+        <img src="./image/anhlog.webp" alt="" />
       </div>
         <div className="col-sm-6 col-xl-6 col-xl-6">
           <h1>Register</h1>

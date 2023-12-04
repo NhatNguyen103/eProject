@@ -89,7 +89,7 @@ function Categories() {
             <Navbar onLogoClick={handleLogoClick} onShowMoreClick={handleShowMoreClick} />
             <HeroSection
                 name="hero-gal"
-                img="./Image/gal.jpg"
+                img="./image/gal.jpg"
                 title="CATEGORIES"
             />
             <Sidebar handleChange={handleChange} />

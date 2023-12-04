@@ -59,7 +59,7 @@ function Contact() {
             <Navbar />
             <HeroSection
                 name="hero-contact"
-                img="./Image/contact.jpg"
+                img="./image/contact.jpg"
                 title="CONTACT"
             />
 
@@ -107,7 +107,7 @@ function Contact() {
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-6 col-xl-6 col-sm-6 my-3 bg-light p-3 ">
-                                    <img src="./Image/signin.png" alt="" />
+                                    <img src="./image/signin.png" alt="" />
                                 </div>
                                 <div className="col-md-6 col-xl-6 col-sm-6 my-3 bg-light p-3 ">
                                     <h1 style={{ fontFamily: " " }}>Reach Out To Us</h1>

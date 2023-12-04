@@ -11,7 +11,7 @@ function Gallery() {
             <Navbar />
             <HeroSection
                 name="hero-cat"
-                img="./Image/cate.jpg"
+                img="./image/cate.jpg"
                 title="GALLERY"
             />
             <FanList/>

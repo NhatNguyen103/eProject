@@ -57,7 +57,7 @@ function Contact2() {
       <Navbar />
       <HeroSection
         name="hero-contact"
-        img="./Image/contact.jpg"
+        img="./image/contact.jpg"
         title="CONTACT"
       />
 
@@ -65,7 +65,7 @@ function Contact2() {
         <div className="container">
           <div className="row justify-content-around class">
             <div className="col-md-6 col-xl-6 col-sm-6 my-3 bg-light p-3 ">
-              <img src="./Image/signup.png" alt="" />
+              <img src="./image/signup.png" alt="" />
             </div>
             <div className="col-md-6 col-xl-6 col-sm-6 my-3 bg-light p-3 ">
               

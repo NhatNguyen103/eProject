@@ -50,7 +50,7 @@ const CheckoutPage = () => {
       <Navbar />
       <HeroSection
         name="hero-about"
-        img="./Image/about.jpg"
+        img="./image/about.jpg"
         title="Checkout Page"
       />
 

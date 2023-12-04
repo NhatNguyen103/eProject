@@ -34,7 +34,7 @@ function Footer() {
             <a href={googleMapsLink} className="text-white  " style={{textDecoration: "none"}}>
                 <i className="fas fa-map-marker-alt" style={{ width: '30px' }}></i>  <iframe
                 title="Google Map"
-                src="./Image/anh1.png"
+                src="./image/anh1.png"
                 width="100%"
                 height="200"
                 frameBorder="0"

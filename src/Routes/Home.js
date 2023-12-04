@@ -9,7 +9,7 @@ function Home() {
             <Navbar />
             <HeroSection
                 name="hero"
-                img="./Image/home.jpg"
+                img="./image/home.jpg"
                 title="FANoFAN"
                 text="...CONTROL THE WEATHER INSIDE"
             />

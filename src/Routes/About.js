@@ -8,7 +8,7 @@ function About() {
             <Navbar/>
             <HeroSection
                 name="hero-about"
-                img="./Image/about.jpg"
+                img="./image/about.jpg"
                 title="ABOUT US"
             />
             <AboutPage/>
