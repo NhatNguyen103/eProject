@@ -57,7 +57,7 @@ function SignUp() {
     <Navbar/>
     <HeroSection
                 name="hero-contact"
-                img="/Image/contact.jpg"
+                img="./Image/contact.jpg"
                 title="Register"
             />
     </div>
@@ -75,7 +75,7 @@ function SignUp() {
           <h1>Register</h1>
 
           <img
-            src="/image/quat.jpg"
+            src="./image/quat.jpg"
             alt=""
             className="rotating-fan rounded-circle"
           />

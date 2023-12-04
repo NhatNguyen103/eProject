@@ -42,7 +42,7 @@ function SignIn() {
         <Navbar />
         <HeroSection
           name="hero-contact"
-          img="/Image/contact.jpg"
+          img="./Image/contact.jpg"
           title="LOG IN "
         />
       </div>
@@ -55,7 +55,7 @@ function SignIn() {
             <h1>Log In</h1>
             
             <img
-              src="/image/quat.jpg"
+              src="./image/quat.jpg"
               alt=""
               className="rotating-fan rounded-circle"
             />
