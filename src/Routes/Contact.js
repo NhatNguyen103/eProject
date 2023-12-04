@@ -6,7 +6,7 @@ import { useNavigate, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import "./Contanct.css";
+import "./Contact.css";
 import ContactMap from "./ContactMap";
 
 function Contact() {
