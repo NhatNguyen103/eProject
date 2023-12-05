@@ -119,11 +119,11 @@ function HomePage() {
                 </div>
             </div>
             <div className="navi">
-                <button className="viewmore" onClick={() => navigate(`/About`)}>About Us</button>
-                <button className="viewmore" onClick={() => navigate(`/Signin`)}>Login</button>
-                <button className="viewmore" onClick={() => navigate(`/Categories`)}>Categories</button>
-                <button className="viewmore" onClick={() => navigate(`/Gallery`)}>Gallery</button>
-                <button className="viewmore" onClick={() => navigate(`/Contact`)}>Contact Us</button>
+                <button className="shadow__btn" onClick={() => navigate(`/About`)}>About Us</button>
+                <button className="shadow__btn" onClick={() => navigate(`/Signin`)}>Login</button>
+                <button className="shadow__btn" onClick={() => navigate(`/Categories`)}>Categories</button>
+                <button className="shadow__btn" onClick={() => navigate(`/Gallery`)}>Gallery</button>
+                <button className="shadow__btn" onClick={() => navigate(`/Contact`)}>Contact Us</button>
             </div>
 
         </div>
