@@ -55,7 +55,7 @@ import { useNavigate , Link } from "react-router-dom";
       <HeroSection
                   name="hero-contact"
                   img="./image/contact.jpg"
-                  title="Log In"
+                  title="Login"
               />
       </div>
       
@@ -69,7 +69,7 @@ import { useNavigate , Link } from "react-router-dom";
           <img src="./image/in1.jpg" alt="" />
         </div>
           <div className="col-sm-6 col-xl-6 col-xl-6">
-            <h1>Log In</h1>
+            <h1>Login</h1>
 
             <img
               src="./image/icon.png"
