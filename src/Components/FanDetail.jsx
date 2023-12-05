@@ -29,6 +29,11 @@ function FanDetail() {
             <div className="fan-detail-container">
                 <div className='fan-pic'>
                     <img src={fan.pic} alt={fan.title} />
+                    <div class="card__content">
+                        <p class="card__title">{fan.title}</p>
+                        <p class="card__title">{fan.Category}</p>
+                        <p class="card__description">{fan.des}</p>
+                    </div>
                 </div>
                 <div className='fan-info'>
                     <h2 className="fan-title">{fan.title}</h2>

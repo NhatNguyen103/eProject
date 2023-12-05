@@ -234,3 +234,42 @@
 .viewmore1:hover{
   transform: scale(1.1);
 }
+
+.viewmore1 {
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hometext {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-radius: 8px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.hometext::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+  z-index: -1;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.hometext:hover::before {
+  height: 100%;
+}
+
+.hometext:hover {
+  box-shadow: none;
+}
+.hometext h2, p{
+  margin: 10px 10px;
+}
