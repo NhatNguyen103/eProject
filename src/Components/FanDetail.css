@@ -199,3 +199,12 @@ td {
   scale: 0;
   transform: rotate(-45deg);
 }
+.tableinfo1{
+  width: 650px;
+}
+.tableinfo1 tr td{
+  font-size: 1.1rem;
+}
+.tableininfo1 .left{
+  width: 200px;
+}

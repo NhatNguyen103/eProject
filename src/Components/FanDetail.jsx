@@ -31,8 +31,58 @@ function FanDetail() {
                     <img src={fan.pic} alt={fan.title} />
                     <div class="card__content">
                         <p class="card__title">{fan.title}</p>
-                        <p class="card__title">{fan.Category}</p>
-                        <p class="card__description">{fan.des}</p>
+                        <table className='tableinfo1'>
+                            <tr>
+                                <td className='left'>Fan Color</td>
+                                <td className='right'>{fan.color}</td>
+                            </tr>
+                            <tr>
+                                <td className='left'>Fan Type</td>
+                                <td className='right'>{fan.Category}</td>
+                            </tr>
+                            <tr>
+                                <td className='left'>Country of Origin</td>
+                                <td className='right'>{fan.origin}</td>
+                            </tr>
+                            <tr>
+                                <td className='left'>Series Number</td>
+                                <td className='right'>{fan.id}</td>
+                            </tr><tr>
+                                <td className='left'>Fan Height</td>
+                                <td className='right'>{fan.Height}</td>
+                            </tr><tr>
+                                <td className='left'>Fan mode indicator</td>
+                                <td className='right'>{fan.mode}</td>
+                            </tr><tr>
+                                <td className='left'>Remote Control</td>
+                                <td className='right'>{fan.remote}</td>
+                            </tr><tr>
+                                <td className='left'>IP rating</td>
+                                <td className='right'><AiFillStar className='card-star' />
+                                    <AiFillStar className='card-star' />
+                                    <AiFillStar className='card-star' />
+                                    <AiFillStar className='card-star' />
+                                    <AiFillStar className='card-star' /></td>
+                            </tr><tr>
+                                <td className='left'>Number of Blades</td>
+                                <td className='right'>{fan.blaze}</td>
+                            </tr><tr>
+                                <td className='left'>Mount Type</td>
+                                <td className='right'>Universal</td>
+                            </tr><tr>
+                                <td className='left'>Input Power and Required Breaker</td>
+                                <td className='right'>{fan.input}</td>
+                            </tr><tr>
+                                <td className='left'>Operating Temperature</td>
+                                <td className='right'>{fan.temp}</td>
+                            </tr><tr>
+                                <td className='left'>Current (min/max speed)</td>
+                                <td className='right'>{fan.current}</td>
+                            </tr><tr>
+                                <td className='left'>Warranty</td>
+                                <td className='right'>{fan.warranty}</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
                 <div className='fan-info'>
