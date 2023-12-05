@@ -17,25 +17,25 @@ function Blaze({handleChange}) {
               <Input
                 handleChange={handleChange}
                 value="3"
-                title="3 Blaze"
+                title="3 Blazes"
                 name = "test2"
               />
               <Input
                 handleChange={handleChange}
                 value="4"
-                title="4 Blaze"
+                title="4 Blazes"
                 name = "test2"
               />
               <Input
                 handleChange={handleChange}
                 value="5"
-                title="5 Blaze"
+                title="5 Blazes"
                 name = "test2"
               />
               <Input
                 handleChange={handleChange}
                 value="6"
-                title="6 Blaze"
+                title="6 Blazes"
                 name = "test2"
               />
               <hr />
