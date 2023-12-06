@@ -1,1 +1,1 @@
-Link view web: https://github.com/NhatNguyen103/eProject.git
+Link view web: https://nhatnguyen103.github.io/eProject/
